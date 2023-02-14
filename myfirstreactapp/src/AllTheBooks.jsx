@@ -7,19 +7,7 @@ import romance from "../src/books/horror.json";
 import React from "react";
 import { Container, Col, Row } from "react-bootstrap";
 
-const alltheBooksArray = [
-  ...fantasy,
-  ...history,
-  ...horror,
-  ...scifi,
-  ...romance,
-];
-
-const alltheBooksArray1 = alltheBooksArray.map((element) => {
-  element.nationality = "english";
-});
-
-for (let i = 0; i < alltheBooksArray.length; i++) {}
+const alltheBooksArray = [...fantasy];
 
 class AllTheBooks extends React.Component {
   render() {
@@ -31,7 +19,6 @@ class AllTheBooks extends React.Component {
               <>
                 <Col xs={12} sm={6} md={4} lg={3}>
                   <SingleBook
-                    image={book.img}
                     text={book.title}
                     price={book.price}
                     category={book.category}
